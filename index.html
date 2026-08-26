@@ -259,6 +259,19 @@ footer::before{content:"💗 ";}footer::after{content:" 🌸";}
 }
 .transaction-badge strong{color:#e85b9f;font-size:20px;letter-spacing:.2px;font-weight:700}
 .transaction-sparkle{font-size:16px}
+
+.raps-price-box{
+  margin:10px 0 14px;
+  padding:11px 12px;
+  border:1px dashed #d98ca8;
+  border-radius:10px;
+  background:#fff0f6;
+  color:#6f4b5d;
+  font-size:11px;
+  line-height:1.6;
+}
+.raps-price-box b{display:block;margin-bottom:4px;color:#b94e79}
+.raps-price-box small{display:block;margin-top:6px;opacity:.82}
 </style>
 <style>
 .calc-divider{text-align:center;margin:18px 0;color:#c989ad;font-size:14px;font-weight:600;opacity:.85}
@@ -1166,14 +1179,25 @@ footer:before,footer:after{display:none!important}footer a{color:#a93f6c!importa
 
     <section id="tokenCalc" class="token-calc" style="display:none">
       <div class="calc-title">♡ RAPS / TOKEN</div>
-      <div class="calc-subtitle">Hitung nominal token dengan cepat.</div>
-      <label for="tokenInput">Jumlah Token</label>
-      <div class="calc-input-wrap"><input id="tokenInput" type="number" min="0" placeholder="0"><span>R</span></div>
-      <div class="calc-result"><span>Estimasi harga</span><strong id="tokenResult">Rp.0</strong></div>
+      <div class="calc-subtitle">Hitung pembelian Raps dengan cepat.</div>
+
+      <div class="raps-price-box">
+        <b>LIST HARGA RAPS / TOKEN</b>
+        <div>100R = 10k · 200R = 20k · 300R = 28k</div>
+        <div>400R = 35k · 500R = 40k · 600R = 45k</div>
+        <div>700R = 50k · 850R = 60k · 1000R = 70k</div>
+        <small>Untuk pembelian di atas 1000R, kalkulator memakai rate 1000R = 70k sebagai estimasi.</small>
+      </div>
+
+      <label for="tokenInput">Mau beli berapa Raps?</label>
+      <div class="calc-input-wrap"><input id="tokenInput" type="number" min="0" placeholder="Contoh: 1500"><span>R</span></div>
+      <div class="calc-result"><span>Harga</span><strong id="tokenResult">Rp.0</strong></div>
+
       <div class="calc-divider">atau</div>
-      <label for="rupiahInput">Nominal Rupiah</label>
-      <div class="calc-input-wrap"><input id="rupiahInput" type="number" min="0" placeholder="0"><span>Rp</span></div>
-      <div class="calc-result"><span>Estimasi token</span><strong id="rupiahResult">0 Token</strong></div>
+
+      <label for="rupiahInput">Punya budget berapa?</label>
+      <div class="calc-input-wrap"><input id="rupiahInput" type="number" min="0" placeholder="Contoh: 105000"><span>Rp</span></div>
+      <div class="calc-result"><span>Estimasi Raps</span><strong id="rupiahResult">0 Raps</strong></div>
     </section>
 
     <footer>♡ Chuwie Kelontong · <a href="https://www.tiktok.com/@chwyy0_" target="_blank" rel="noopener">TikTok @chwyy0_</a> · pilih item, bayar, konfirmasi ♡</footer>
@@ -1215,12 +1239,12 @@ const data={
 "Sword Cewe":[
 ["Dual Flutter Blade","43k"],["Dual Heart Blade","50k"],["Dual Luv4pain Blade","45k"],["Dual Loveclaw Blade","48k"],["Dual Love Blade","45k"],["Dual Ribbon Blade","45k"],["Dual Rose Blade","40k"],["Dual Soulbloom Blade","35k"],["Dual Spring Saber Blade","35k"],["Dual Strawberry Cake Blade","40k"],["Dual Butterfly Blade","35k"],["Butterfly Bow","65k"],["Dual Bubble Blade + Aksesoris","65k"],["Dual Gothic Bunny","60k"],["Dual Sugarcoated Saber","70k"],["Harmonic Fan","83k"],["Nyxpetal Fan","93k"],["Peachborne Fan","83k"],["Dual Bubble Blaster","117k"],["Sakura Parasol","101k"]],
 "Sword Entry Level":[
-["Witch's Curse","215k"],["Poisoned Bunny","315k"],["Fox Katana","385k"],["New Year Set ( Finisher )","86k"],["Dual Love Sickle ( Finisher )","86k"],["Witch Set ( Finisher)","75k"],["Neo Katana","120k"],["Chained Scorpion (Finisher)","86k"],["Samurai Set","94k"],["Pillow","185k"],["Pink Oni Katana","205k"],["Red Oni Katana","210k"],["Purple Oni Katana","210k"],["Blue Oni Katana","215k"],["Redmoon Katana","215k"],["Riftlare Katana","215k"],["Black Oni Katana","222k"],["Hollow Oath Katana","225k"],["Floppy Chiken","225k"],["Star Wand","225k"],["Higanbana Katana","255k"],["Pulse Heart","285k"],["Lily Katana","300k"],["Gyaru Katana","325k"],["Dual Yin Yang","334k"],["Hitman","375k"],["Brutality Affection Bat","420k"],["Pink Ninja Katana","478k"],["Blosoom Katana","500k"],["Kitty Katana","800k"],["Pearl Angel Katana","240k"],["Astral Seraph","240k"],["North Blade","96k"],["Crystal Great Blade","115k"],["Cat Paw","750k"],["Kitty Launcher","1,205k"]],
+["Witch's Curse","215k"],["Poisoned Bunny","315k"],["Fox Katana","385k"],["New Year Set ( Finisher )","86k"],["Dual Love Sickle ( Finisher )","86k"],["Witch Set ( Finisher)","75k"],["Neo Katana","120k"],["Chained Scorpion (Finisher)","86k"],["Samurai Set","94k"],["Pillow","185k"],["Pink Oni Katana","205k"],["Red Oni Katana","210k"],["Purple Oni Katana","210k"],["Blue Oni Katana","215k"],["Redmoon Katana","215k"],["Riftlare Katana","215k"],["Black Oni Katana","222k"],["Hollow Oath Katana","225k"],["Floppy Chiken","225k"],["Star Wand","225k"],["Higanbana Katana","255k"],["Pulse Heart","285k"],["Lily Katana","300k"],["Gyaru Katana","325k"],["Dual Yin Yang","334k"],["Hitman","375k"],["Brutality Affection Bat","420k"],["Pink Ninja Katana","478k"],["Blosoom Katana","500k"],["Kitty Katana","800k"],["Pearl Angel Katana","240k"],["Astral Seraph","240k"],["North Blade","115k"],["Crystal Great Blade","135k"],["Cat Paw","750k"],["Kitty Launcher","1,205k"]],
 "Emote":[
 ["Lush","5k"],["Walk This Earth","5k"],["Love Struck Sway","8k"],["Heart Clap","8k"],["Jiggy","8k"],["Floating Seat","10k"],["Duo Dansen","10k"],["Shake","10k"],["Freestyle Dance","10k"],["Air Punch","10k"],["Pumpin","10k"],["Headless Dribble","10k"],["Pointing The Finger","10k"],["Haunted Bow","10k"],["I'm Sorry","10k"],["Bunny Conga","10k"],["Really Shy","10k"],["Tantrum","10k"],["Real Man","12k"],["Dansen","14k"],["Assumptions","16k"],["Scaredy Cat","16k"],["Office Spin","17k"],["Phantom Chase","18k"],["Floating Heart Aura","26k"],["Blushing Gesture","27k"],["Snowfall Dance","30k"],["I'm Tired","30k"],["Parrot Dance","34k"],["Wait","38k"],["Glitched Dance","46k"],["Look At Me","88k"],["Popular","92k"],["Bring it Around","125k"],["Dancinha","230k"],["Proposal","268k"],["Queen Throne","315k"],["Montagem Miaw","406k"],["Legs Kickin","525k"],["Rose Gift","630k"],["Hug","1,035k"]],
 "Explosions":[
 ["Crystalized Peach","10k"],["Dimension of Forgotten","12k"],["Crystal Mirror","12k"],["Flowers Garden","12k"],["Shadow Vortex","12k"],["Shattered Peach","13k"],["Oblivion Strike","13k"],["Aesthetic Butterfly","13k"],["Wifi POP Explosion","15k"],["Bubble Magic","17k"],["Bad Luck Explosion","18k"],["Coated Candy","22k"],["Bloom Awakening","33k"],["Heart Awakening","34k"],["Gyaru Selfie","35k"],["Pearl Angel Katana Explosion","35k"],["Affection Rain","44k"],["Serpent Anchor","45k"],["Starwand Explosion","47k"],["Tiger Katana Explosion","48k"],["Katana Pink Explosion","52k"],["Fox Katana Explosion","52k"],["Brutality Affection Explosion","58k"],["Poisoned Bunny Explosion","60k"],["Spooky CAT","78k"],["Affection Hopper","86k"],["Fallen Angel Explosion","88k"],["Meowplosion","120k"],["Prismatic Cloud","130k"],["Kitty Katana Explosion","155k"],["Dual Yin Yang Greatsword Explosion","155k"],["Paw Punch","386k"],["Kitty Rocket","635k"]],
-"Raps / Token":[["100R","10k"],["200R","20k"],["300R","28k"],["400R","35k"],["500R","40k"],["600R","45k"],["750R","50k"],["1000R","70k"]]
+"Raps / Token":[["100R","10k"],["200R","20k"],["300R","28k"],["400R","35k"],["500R","40k"],["600R","45k"],["700R","50k"],["850R","60k"],["1000R","70k"]]
 };
 
 const productImages = {"pink ninja katana": "Gambar/Semua/Pink Ninja Katana .png", "rose gift": "Gambar/Semua/Rose Gift.png", "dual bubble blaster": "Gambar/Semua/Dual Bubble Blaster.png", "shattered peach": "Gambar/Semua/Shattered Peach.png", "higanbana katana": "Gambar/Semua/Higanbana Katana.png", "montagem miaw": "Gambar/Semua/Montagem Miaw.png", "wifi pop explosion": "Gambar/Semua/Wifi POP Explosion.png", "strawberry cake blade": "Gambar/Semua/Strawberry Cake Blade.png", "dual nyxpetal blade": "Gambar/Semua/Dual Nyxpetal Blade.png", "dual nebula scythe": "Gambar/Semua/Dual Nebula Scythe.png", "y2k": "Gambar/Semua/Y2K.png", "ribbon blade": "Gambar/Semua/Ribbon Blade.png", "pearl angel katana explosion": "Gambar/Semua/Pearl Angel Katana Explosion.png", "proposal": "Gambar/Semua/Proposal.png", "meowplosion": "Gambar/Semua/Meowplosion.png", "hug": "Gambar/Semua/Hug.png", "air punch": "Gambar/Semua/Air Punch.png", "star wand": "Gambar/Semua/Star Wand.png", "i'm tired": "Gambar/Semua/I'm Tired.png", "dual bubble blade + aksesoris": "Gambar/Semua/Dual Bubble Blade + Aksesoris.png", "blue oni katana": "Gambar/Semua/Blue Oni Katana .png", "bring it around": "Gambar/Semua/Bring it Around.png", "blackcat blade": "Gambar/Semua/Blackcat Blade.png", "new year set(finisher)": "Gambar/Semua/New Year Set ( Finisher ).png", "gravebone blade": "Gambar/Semua/Gravebone Blade.png", "prismatic cloud": "Gambar/Semua/Prismatic Cloud.png", "dual yin yang greatsword explosion": "Gambar/Semua/Dual Yin Yang Greatsword Explosion.png", "samurai katana": "Gambar/Semua/Samurai Katana.png", "samurai set": "Gambar/Semua/Samurai Set.png", "assumptions": "Gambar/Semua/Assumptions.png", "cat paw": "Gambar/Semua/Cat Paw.png", "rose blade": "Gambar/Semua/Rose Blade.png", "arachne blade": "Gambar/Semua/Arachne Blade.png", "bad luck explosion": "Gambar/Semua/Bad Luck Explosion.png", "real man": "Gambar/Semua/Real Man.png", "haunted bow": "Gambar/Semua/Haunted Bow.png", "dual spring saber blade": "Gambar/Semua/Dual Spring Saber Blade.png", "bubble magic": "Gambar/Semua/Bubble Magic.png", "duo dansen": "Gambar/Semua/Duo Dansen.png", "aether watch blade": "Gambar/Semua/Aether Watch Blade.png", "dual eternal blaster(finisher)": "Gambar/Semua/Dual Eternal Blaster ( Finisher ).png", "butterfly blade": "Gambar/Semua/Butterfly Blade.png", "dual shadow monarch": "Gambar/Semua/Dual Shadow Monarch.png", "dual heart blade": "Gambar/Semua/Dual Heart Blade.png", "freestyle dance": "Gambar/Semua/Freestyle Dance.png", "legs kickin": "Gambar/Semua/Legs Kickin.png", "poisoned bunny": "Gambar/Semua/Poisoned Bunny.png", "dual candy cane blasters(finisher)": "Gambar/Semua/Dual Candy Cane Blasters ( Finisher ).png", "dual sugarcoated saber": "Gambar/Semua/Dual Sugarcoated Saber.png", "look at me": "Gambar/Semua/Look At Me.png", "neo katana": "Gambar/Semua/Neo Katana.png", "gravebone scythe": "Gambar/Semua/Gravebone Scythe.png", "scaredy cat": "Gambar/Semua/Scaredy Cat.png", "shadow vortex": "Gambar/Semua/Shadow Vortex.png", "glitched dance": "Gambar/Semua/Glitched Dance.png", "red oni katana": "Gambar/Semua/Red Oni Katana.png", "tiger katana explosion": "Gambar/Semua/Tiger Katana Explosion.png", "riftlare katana": "Gambar/Semua/Riftlare katana.png", "redmoon katana": "Gambar/Semua/Redmoon Katana.png", "purple oni katana": "Gambar/Semua/Purple Oni Katana.png", "sakura parasol": "Gambar/Semua/Sakura Parasol.png", "heart clap": "Gambar/Semua/Heart Clap.png", "brutality affection bat": "Gambar/Semua/Brutality Affection Bat.png", "nyxpetal fan": "Gambar/Semua/Nyxpetal Fan.png", "flowers garden": "Gambar/Semua/Flowers Garden.png", "hollow oath katana": "Gambar/Semua/Hollow Oath Katana.png", "affection rain": "Gambar/Semua/Affection Rain.png", "samurai bow": "Gambar/Semua/Samurai Bow.png", "dual strawberry cake blade": "Gambar/Semua/Dual Strawberry Cake Blade.png", "final phase": "Gambar/Semua/Final Phase.png", "blushing gesture": "Gambar/Semua/Blushing Gesture.png", "popular": "Gambar/Semua/Popular.png", "harmonic fan": "Gambar/Semua/Harmonic Fan.png", "gyaru katana": "Gambar/Semua/Gyaru Katana.png", "kitty rocket": "Gambar/Semua/Kitty Rocket.png", "dual soulbloom blade": "Gambar/Semua/Dual Soulbloom Blade.png", "katana pink explosion": "Gambar/Semua/Katana Pink Explosion.png", "gyaru selfie": "Gambar/Semua/Gyaru Selfie.png", "dual pixel blasters(finisher)": "Gambar/Semua/Dual Pixel Blasters ( Finisher ).png", "peachborne fan": "Gambar/Semua/Peachborne Fan.png", "pumpin": "Gambar/Semua/Pumpin.png", "paw punch": "Gambar/Semua/Paw Punch.png", "bunny conga": "Gambar/Semua/Bunny Conga.png", "really shy": "Gambar/Semua/Really Shy.png", "aesthetic butterfly": "Gambar/Semua/Aesthetic Butterfly.png", "sugarcoated saber": "Gambar/Semua/Sugarcoated Saber.png", "dual flutter blade": "Gambar/Semua/Dual Flutter Blade.png", "loveclaw blade": "Gambar/Semua/Loveclaw Blade.png", "hazy katana": "Gambar/Semua/Hazy Katana.png", "flutter blade": "Gambar/Semua/Flutter Blade.png", "affection hopper": "Gambar/Semua/Affection Hopper.png", "parrot dance": "Gambar/Semua/Parrot Dance.png", "crystalized peach": "Gambar/Semua/Crystalized Peach.png", "starwand explosion": "Gambar/Semua/Starwand Explosion.png", "dual love sickle(finisher)": "Gambar/Semua/Dual Love Sickle ( Finisher ).png", "runic red blade": "Gambar/Semua/Runic Red Blade.png", "oceans lement": "Gambar/Semua/Oceans Lement.png", "dual cursed blade": "Gambar/Semua/Dual Cursed Blade.png", "dual gothic bunny": "Gambar/Semua/Dual Gothic Bunny.png", "spooky cat": "Gambar/Semua/Spooky CAT.png", "headless dribble": "Gambar/Semua/Headless Dribble.png", "poisoned bunny explosion": "Gambar/Semua/Poisoned Bunny Explosion.png", "vampire saw": "Gambar/Semua/Vampire Saw.png", "walk this earth": "Gambar/Semua/Walk This Earth.png", "pointing the finger": "Gambar/Semua/Pointing The Finger.png", "blosoom katana": "Gambar/Semua/Blosoom katana.png", "fox katana": "Gambar/Semua/Fox Katana.png", "floppy chiken": "Gambar/Semua/Floppy Chiken.png", "kitty katana": "Gambar/Semua/Kitty Katana.png", "snowfall dance": "Gambar/Semua/Snowfall Dance.png", "wait": "Gambar/Semua/Wait.png", "kitty katana explosion": "Gambar/Semua/Kitty Katana Explosion.png", "dual yin yang": "Gambar/Semua/Dual Yin Yang.png", "chained scorpion(finisher)": "Gambar/Semua/Chained Scorpion ( Finisher ) .png", "jiggy": "Gambar/Semua/Jiggy.png", "dual rose blade": "Gambar/Semua/Dual Rose Blade.png", "pink oni katana": "Gambar/Semua/Pink Oni Katana.png", "black oni katana": "Gambar/Semua/Black Oni Katana.png", "dancinha": "Gambar/Semua/Dancinha.png", "heart awakening": "Gambar/Semua/Heart Awakening.png", "pulse heart": "Gambar/Semua/Pulse Heart.png", "bloodpetal blade": "Gambar/Semua/Bloodpetal Blade.png", "phantom chase": "Gambar/Semua/Phantom Chase.png", "floating heart aura": "Gambar/Semua/Floating Heart Aura.png", "death call": "Gambar/Semua/Death Call.png", "fallen angel explosion": "Gambar/Semua/Fallen Angel Explosion.png", "dual love blade": "Gambar/Semua/Dual Love Blade.png", "witch set(finisher)": "Gambar/Semua/Witch Set ( Finisher).png", "i'm sorry": "Gambar/Semua/I'm Sorry.png", "floating seat": "Gambar/Semua/Floating Seat.png", "hellchain": "Gambar/Semua/Hellchain.png", "hitman": "Gambar/Semua/Hitman.png", "corrupted loveblade": "Gambar/Semua/Corrupted Loveblade.png", "kitty launcher": "Gambar/Semua/Kitty Launcher.png", "lumen petal": "Gambar/Semua/Lumen Petal.png", "dansen": "Gambar/Semua/Dansen.png", "shake": "Gambar/Semua/Shake.png", "queen throne": "Gambar/Semua/Queen Throne.png", "tantrum": "Gambar/Semua/Tantrum.png", "witch's curse": "Gambar/Semua/Witch's Curse.png", "dimension of forgotten": "Gambar/Semua/Dimension of Forgotten.png", "dual demonic scythe": "Gambar/Semua/Dual Demonic Scythe.png", "fox katana explosion": "Gambar/Semua/Fox Katana Explosion.png", "bloom awakening": "Gambar/Semua/Bloom Awakening.png", "bloom katana": "Gambar/Semua/Bloom Katana.png", "lily katana": "Gambar/Semua/Lily Katana.png", "office spin": "Gambar/Semua/Office Spin.png", "coated candy": "Gambar/Semua/Coated Candy.png", "luv4pain blade": "Gambar/Semua/Luv4pain Blade.png", "dual celestial dawn blade": "Gambar/Semua/Dual Celestial Dawn Blade.png", "brutality affection explosion": "Gambar/Semua/Brutality Affection Explosion.png", "atherial azure katana": "Gambar/Semua/Atherial Azure Katana.png", "love struck sway": "Gambar/Semua/Love Struck Sway.png", "serpent anchor": "Gambar/Semua/Serpent Anchor.png", "pillow": "Gambar/Semua/Pillow.png", "dual ribbon blade": "Gambar/Semua/Dual Ribbon Blade.png", "sinister": "Gambar/Semua/Sinister.png", "crystal mirror": "Gambar/Semua/Crystal Mirror.png", "lush": "Gambar/Semua/Lush.png", "dual loveclaw blade": "Gambar/Semua/Dual Loveclaw Blade.png", "oblivion strike": "Gambar/Semua/Oblivion Strike.png", "pearl angel katana": "Gambar/Semua/Pearl Angel Katana.png", "astral seraph": "Gambar/Semua/Astral Seraph Blade.png", "north blade": "Gambar/Semua/North Blade.png", "crystal great blade": "Gambar/Semua/Crystal Great Blade.png", "dual luv4pain blade": "Gambar/Semua/Dual Luv4pain.png",
@@ -1328,13 +1352,68 @@ document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{
   document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
   b.classList.add('active');
   current=b.dataset.cat;
-  search.value=""; tokenInput.value=""; tokenResult.textContent="Rp.0"; rupiahInput.value=""; rupiahResult.textContent="0 Token";
+  search.value=""; tokenInput.value=""; tokenResult.textContent="Rp.0"; rupiahInput.value=""; rupiahResult.textContent="0 Raps";
   render(); window.scrollTo({top:0,behavior:'smooth'});
 }));
 search.addEventListener('input',render);
 document.getElementById('searchClear').addEventListener('click',()=>{search.value='';render();search.focus()});
-tokenInput.addEventListener('input',()=>{const tokens=Math.max(0,Number(tokenInput.value)||0);tokenResult.textContent="Rp."+(tokens*70).toLocaleString("id-ID")});
-rupiahInput.addEventListener('input',()=>{const rupiah=Math.max(0,Number(rupiahInput.value)||0);const tokens=Math.floor(rupiah/70);rupiahResult.textContent=tokens.toLocaleString("id-ID")+" Token"});
+const rapsPricelist = [
+  [100,10000],[200,20000],[300,28000],[400,35000],[500,40000],
+  [600,45000],[700,50000],[850,60000],[1000,70000]
+];
+
+function formatRp(n){
+  return "Rp." + Math.round(n).toLocaleString("id-ID");
+}
+
+function getRapsPrice(raps){
+  if(raps <= 0) return 0;
+
+  // Sampai 1000R: hanya nominal yang memang ada di pricelist.
+  const exact = rapsPricelist.find(([r]) => r === raps);
+  if(exact) return exact[1];
+
+  // Di atas 1000R: estimasi dari rate 1000R = 70k.
+  if(raps > 1000) return (raps / 1000) * 70000;
+
+  return null;
+}
+
+tokenInput.addEventListener('input',()=>{
+  const raps=Math.max(0,Number(tokenInput.value)||0);
+  const price=getRapsPrice(raps);
+
+  if(!raps){
+    tokenResult.textContent="Rp.0";
+  }else if(price===null){
+    tokenResult.textContent="Pilih nominal pricelist";
+  }else{
+    tokenResult.textContent=formatRp(price);
+  }
+});
+
+rupiahInput.addEventListener('input',()=>{
+  const rupiah=Math.max(0,Number(rupiahInput.value)||0);
+
+  if(!rupiah){
+    rupiahResult.textContent="0 Raps";
+    return;
+  }
+
+  // Di bawah 70k: tampilkan paket pricelist terbesar yang masih muat.
+  if(rupiah < 70000){
+    let best=0;
+    for(const [raps,price] of rapsPricelist){
+      if(price <= rupiah) best=raps;
+    }
+    rupiahResult.textContent=best ? best.toLocaleString("id-ID")+" Raps" : "Di bawah 100R";
+    return;
+  }
+
+  // 70k ke atas: estimasi berdasarkan 1000R = 70k.
+  const raps=(rupiah/70000)*1000;
+  rupiahResult.textContent=Math.floor(raps).toLocaleString("id-ID")+" Raps";
+});
 document.getElementById('modalClose').addEventListener('click',closeBuy);
 document.getElementById('modalCancel').addEventListener('click',closeBuy);
 buyModal.addEventListener('click',e=>{if(e.target===buyModal)closeBuy()});
