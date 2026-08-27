@@ -260,18 +260,103 @@ footer::before{content:"💗 ";}footer::after{content:" 🌸";}
 .transaction-badge strong{color:#e85b9f;font-size:20px;letter-spacing:.2px;font-weight:700}
 .transaction-sparkle{font-size:16px}
 
-.raps-price-box{
-  margin:10px 0 14px;
-  padding:11px 12px;
-  border:1px dashed #d98ca8;
-  border-radius:10px;
-  background:#fff0f6;
-  color:#6f4b5d;
-  font-size:11px;
-  line-height:1.6;
+
+/* ✦ Cute Raps Calculator */
+.token-calc{
+  position:relative;
+  overflow:hidden;
+  margin-top:14px;
+  padding:16px;
+  border:2px solid #f3a8c6;
+  border-radius:18px;
+  background:linear-gradient(145deg,#fff8fc,#ffeaf4);
+  box-shadow:0 5px 0 #e9a0bd,0 10px 22px rgba(197,105,145,.12);
 }
-.raps-price-box b{display:block;margin-bottom:4px;color:#b94e79}
-.raps-price-box small{display:block;margin-top:6px;opacity:.82}
+.token-calc::before{
+  content:"♡  ✦  ♡";
+  position:absolute;
+  top:6px;
+  right:10px;
+  color:#f19abd;
+  font-size:13px;
+  letter-spacing:3px;
+}
+.token-calc .calc-title{
+  color:#d65b8b;
+  font-size:16px;
+  font-weight:800;
+  letter-spacing:.5px;
+  text-shadow:1px 1px #fff;
+}
+.token-calc .calc-subtitle{
+  margin:3px 0 13px;
+  color:#9b657d;
+  font-size:11px;
+}
+.token-calc label{
+  display:block;
+  margin:9px 0 5px;
+  color:#a64f72;
+  font-size:11px;
+  font-weight:700;
+}
+.token-calc .calc-input-wrap{
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  border:1.5px solid #efadc7;
+  border-radius:12px;
+  background:#fff;
+}
+.token-calc .calc-input-wrap input{
+  width:100%;
+  padding:10px 11px;
+  border:0;
+  outline:0;
+  background:transparent;
+  color:#75485d;
+  font-weight:700;
+}
+.token-calc .calc-input-wrap span{
+  padding:0 11px;
+  color:#d65b8b;
+  font-weight:800;
+}
+.token-calc .calc-result{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-top:7px;
+  padding:9px 11px;
+  border-radius:11px;
+  background:#fff;
+  border:1px dashed #efadc7;
+}
+.token-calc .calc-result span{
+  color:#9b657d;
+  font-size:11px;
+}
+.token-calc .calc-result strong{
+  color:#d24f83;
+  font-size:14px;
+}
+.token-calc .calc-divider{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin:12px 0 5px;
+  color:#d98aaa;
+  font-size:10px;
+  font-weight:700;
+}
+.token-calc .calc-divider::before,
+.token-calc .calc-divider::after{
+  content:"";
+  flex:1;
+  height:1px;
+  background:#f0bfd2;
+}
+
 </style>
 <style>
 .calc-divider{text-align:center;margin:18px 0;color:#c989ad;font-size:14px;font-weight:600;opacity:.85}
@@ -1178,26 +1263,30 @@ footer:before,footer:after{display:none!important}footer a{color:#a93f6c!importa
     </section>
 
     <section id="tokenCalc" class="token-calc" style="display:none">
-      <div class="calc-title">♡ RAPS / TOKEN</div>
-      <div class="calc-subtitle">Hitung pembelian Raps dengan cepat.</div>
-
-      <div class="raps-price-box">
-        <b>LIST HARGA RAPS / TOKEN</b>
-        <div>100R = 10k · 200R = 20k · 300R = 28k</div>
-        <div>400R = 35k · 500R = 40k · 600R = 45k</div>
-        <div>700R = 50k · 850R = 60k · 1000R = 70k</div>
-        <small>Untuk pembelian di atas 1000R, kalkulator memakai rate 1000R = 70k sebagai estimasi.</small>
-      </div>
+      <div class="calc-title">♡ RAPS / TOKEN ✦</div>
+      <div class="calc-subtitle">Hitung pembelian Raps dengan cepat~ 🎀</div>
 
       <label for="tokenInput">Mau beli berapa Raps?</label>
-      <div class="calc-input-wrap"><input id="tokenInput" type="number" min="0" placeholder="Contoh: 1500"><span>R</span></div>
-      <div class="calc-result"><span>Harga</span><strong id="tokenResult">Rp.0</strong></div>
+      <div class="calc-input-wrap">
+        <input id="tokenInput" type="number" min="0" placeholder="Contoh: 1500">
+        <span>R</span>
+      </div>
+      <div class="calc-result">
+        <span>♡ Harga</span>
+        <strong id="tokenResult">Rp.0</strong>
+      </div>
 
       <div class="calc-divider">atau</div>
 
       <label for="rupiahInput">Punya budget berapa?</label>
-      <div class="calc-input-wrap"><input id="rupiahInput" type="number" min="0" placeholder="Contoh: 105000"><span>Rp</span></div>
-      <div class="calc-result"><span>Estimasi Raps</span><strong id="rupiahResult">0 Raps</strong></div>
+      <div class="calc-input-wrap">
+        <input id="rupiahInput" type="number" min="0" placeholder="Contoh: 105000">
+        <span>Rp</span>
+      </div>
+      <div class="calc-result">
+        <span>♡ Estimasi Raps</span>
+        <strong id="rupiahResult">0 Raps</strong>
+      </div>
     </section>
 
     <footer>♡ Chuwie Kelontong · <a href="https://www.tiktok.com/@chwyy0_" target="_blank" rel="noopener">TikTok @chwyy0_</a> · pilih item, bayar, konfirmasi ♡</footer>
@@ -1235,15 +1324,15 @@ const data={
 "Sword Under 30k":[
 ["Sugarcoated Saber","30k"],["Dual Demonic Scythe","30k"],["Dual Shadow Monarch","30k"],["Oceans Lement","30k"],["Gravebone Scythe","30k"],["Loveclaw Blade","30k"],["Dual Nebula Scythe","28k"],["Dual Celestial Dawn Blade","28k"],["Samurai Bow","28k"],["Dual Nyxpetal Blade","28k"],["Dual Cursed Blade","28k"],["Aether Watch Blade","25k"],["Butterfly Blade","25k"],["Luv4pain Blade","25k"],["Bloom Katana","25k"],["Ribbon Blade","24k"],["Bloodpetal Blade","20k"],["Vampire Saw","20k"],["Flutter Blade","20k"],["Atherial Azure Katana","20k"]],
 "Backsword":[
-["Strawberry Cake Blade","35k"],["Final Phase","45k"],["Rose Blade","60k"],["Samurai Katana","47k"],["Blackcat Blade","46k"],["Sinister","40k"],["Corrupted Loveblade","40k"],["Hellchain","36k"],["Death Call","35k"],["Hazy Katana","38k"],["Arachne Blade","38k"],["Lumen Petal","40k"],["Y2K","50k"],["Gravebone Blade","35k"],["Runic Red Blade","40k"]],
+["Strawberry Cake Blade","35k"],["Final Phase","45k"],["Rose Blade","60k"],["Samurai Katana","55k"],["Blackcat Blade","46k"],["Sinister","40k"],["Corrupted Loveblade","40k"],["Hellchain","36k"],["Death Call","35k"],["Hazy Katana","38k"],["Arachne Blade","38k"],["Lumen Petal","40k"],["Y2K","50k"],["Gravebone Blade","35k"],["Runic Red Blade","40k"]],
 "Sword Cewe":[
 ["Dual Flutter Blade","43k"],["Dual Heart Blade","50k"],["Dual Luv4pain Blade","45k"],["Dual Loveclaw Blade","48k"],["Dual Love Blade","45k"],["Dual Ribbon Blade","45k"],["Dual Rose Blade","40k"],["Dual Soulbloom Blade","35k"],["Dual Spring Saber Blade","35k"],["Dual Strawberry Cake Blade","40k"],["Dual Butterfly Blade","35k"],["Butterfly Bow","65k"],["Dual Bubble Blade + Aksesoris","65k"],["Dual Gothic Bunny","60k"],["Dual Sugarcoated Saber","70k"],["Harmonic Fan","83k"],["Nyxpetal Fan","93k"],["Peachborne Fan","83k"],["Dual Bubble Blaster","117k"],["Sakura Parasol","101k"]],
 "Sword Entry Level":[
 ["Witch's Curse","215k"],["Poisoned Bunny","315k"],["Fox Katana","385k"],["New Year Set ( Finisher )","86k"],["Dual Love Sickle ( Finisher )","86k"],["Witch Set ( Finisher)","75k"],["Neo Katana","120k"],["Chained Scorpion (Finisher)","86k"],["Samurai Set","94k"],["Pillow","185k"],["Pink Oni Katana","205k"],["Red Oni Katana","210k"],["Purple Oni Katana","210k"],["Blue Oni Katana","215k"],["Redmoon Katana","215k"],["Riftlare Katana","215k"],["Black Oni Katana","222k"],["Hollow Oath Katana","225k"],["Floppy Chiken","225k"],["Star Wand","225k"],["Higanbana Katana","255k"],["Pulse Heart","285k"],["Lily Katana","300k"],["Gyaru Katana","325k"],["Dual Yin Yang","334k"],["Hitman","375k"],["Brutality Affection Bat","420k"],["Pink Ninja Katana","478k"],["Blosoom Katana","500k"],["Kitty Katana","800k"],["Pearl Angel Katana","240k"],["Astral Seraph","240k"],["North Blade","115k"],["Crystal Great Blade","135k"],["Cat Paw","750k"],["Kitty Launcher","1,205k"]],
 "Emote":[
-["Lush","5k"],["Walk This Earth","5k"],["Love Struck Sway","8k"],["Heart Clap","8k"],["Jiggy","8k"],["Floating Seat","10k"],["Duo Dansen","10k"],["Shake","10k"],["Freestyle Dance","10k"],["Air Punch","10k"],["Pumpin","10k"],["Headless Dribble","10k"],["Pointing The Finger","10k"],["Haunted Bow","10k"],["I'm Sorry","10k"],["Bunny Conga","10k"],["Really Shy","10k"],["Tantrum","10k"],["Real Man","12k"],["Dansen","14k"],["Assumptions","16k"],["Scaredy Cat","16k"],["Office Spin","17k"],["Phantom Chase","18k"],["Floating Heart Aura","26k"],["Blushing Gesture","27k"],["Snowfall Dance","30k"],["I'm Tired","30k"],["Parrot Dance","34k"],["Wait","38k"],["Glitched Dance","46k"],["Look At Me","88k"],["Popular","92k"],["Bring it Around","125k"],["Dancinha","230k"],["Proposal","268k"],["Queen Throne","315k"],["Montagem Miaw","406k"],["Legs Kickin","525k"],["Rose Gift","630k"],["Hug","1,035k"]],
+["Lush","9k"],["Walk This Earth","9k"],["Love Struck Sway","12k"],["Heart Clap","12k"],["Jiggy","12k"],["Floating Seat","14k"],["Duo Dansen","14k"],["Shake","14k"],["Freestyle Dance","14k"],["Air Punch","14k"],["Pumpin","14k"],["Headless Dribble","14k"],["Pointing The Finger","14k"],["Haunted Bow","14k"],["I'm Sorry","14k"],["Bunny Conga","14k"],["Really Shy","14k"],["Tantrum","14k"],["Real Man","16k"],["Dansen","18k"],["Assumptions","20k"],["Scaredy Cat","20k"],["Office Spin","21k"],["Phantom Chase","22k"],["Floating Heart Aura","30k"],["Blushing Gesture","31k"],["Snowfall Dance","34k"],["I'm Tired","34k"],["Parrot Dance","38k"],["Wait","42k"],["Glitched Dance","50k"],["Look At Me","92k"],["Popular","96k"],["Bring it Around","129k"],["Dancinha","234k"],["Proposal","272k"],["Queen Throne","319k"],["Montagem Miaw","410k"],["Legs Kickin","529k"],["Rose Gift","634k"],["Hug","1039k"]],
 "Explosions":[
-["Crystalized Peach","10k"],["Dimension of Forgotten","12k"],["Crystal Mirror","12k"],["Flowers Garden","12k"],["Shadow Vortex","12k"],["Shattered Peach","13k"],["Oblivion Strike","13k"],["Aesthetic Butterfly","13k"],["Wifi POP Explosion","15k"],["Bubble Magic","17k"],["Bad Luck Explosion","18k"],["Coated Candy","22k"],["Bloom Awakening","33k"],["Heart Awakening","34k"],["Gyaru Selfie","35k"],["Pearl Angel Katana Explosion","35k"],["Affection Rain","44k"],["Serpent Anchor","45k"],["Starwand Explosion","47k"],["Tiger Katana Explosion","48k"],["Katana Pink Explosion","52k"],["Fox Katana Explosion","52k"],["Brutality Affection Explosion","58k"],["Poisoned Bunny Explosion","60k"],["Spooky CAT","78k"],["Affection Hopper","86k"],["Fallen Angel Explosion","88k"],["Meowplosion","120k"],["Prismatic Cloud","130k"],["Kitty Katana Explosion","155k"],["Dual Yin Yang Greatsword Explosion","155k"],["Paw Punch","386k"],["Kitty Rocket","635k"]],
+["Crystalized Peach","14k"],["Dimension of Forgotten","16k"],["Crystal Mirror","16k"],["Flowers Garden","16k"],["Shadow Vortex","16k"],["Shattered Peach","17k"],["Oblivion Strike","17k"],["Aesthetic Butterfly","17k"],["Wifi POP Explosion","19k"],["Bubble Magic","21k"],["Bad Luck Explosion","22k"],["Coated Candy","26k"],["Bloom Awakening","37k"],["Heart Awakening","38k"],["Gyaru Selfie","39k"],["Pearl Angel Katana Explosion","39k"],["Affection Rain","48k"],["Serpent Anchor","49k"],["Starwand Explosion","51k"],["Tiger Katana Explosion","52k"],["Katana Pink Explosion","56k"],["Fox Katana Explosion","56k"],["Brutality Affection Explosion","62k"],["Poisoned Bunny Explosion","64k"],["Spooky CAT","82k"],["Affection Hopper","90k"],["Fallen Angel Explosion","92k"],["Meowplosion","124k"],["Prismatic Cloud","134k"],["Kitty Katana Explosion","159k"],["Dual Yin Yang Greatsword Explosion","159k"],["Paw Punch","390k"],["Kitty Rocket","639k"]],
 "Raps / Token":[["100R","10k"],["200R","20k"],["300R","28k"],["400R","35k"],["500R","40k"],["600R","45k"],["700R","50k"],["850R","60k"],["1000R","70k"]]
 };
 
@@ -1283,22 +1372,38 @@ const modalAmount=document.getElementById("modalAmount");
 const confirmOrder=document.getElementById("confirmOrder");
 const categories=Object.keys(data);
 data["Semua"]=categories.filter(c=>c!=="Raps / Token").flatMap(c=>data[c]);
+
+// Item khusus yang memang ditambahkan manual ke tab Semua.
 data["Semua"].push(
+  ["Dual Celestial Dawn Blade","35k"],
   ["Blue Bunny Katana","35k"],
   ["Dual Blue Bunny Katana","50k"],
-  ["Dual Celestial Dawn Blade","35k"],
   ["Dual Stardust Katana","40k"],
   ["Nifty's Blade","40k"],
   ["Dual Eternal Blaster ( Finisher )","50k"],
   ["Dual Candy Cane Blasters ( Finisher )","50k"],
   ["Dual Pixel Blasters ( Finisher )","45k"]
 );
+
+// Sinkronisasi harga Emote & Explosions ke tab Semua.
+["Emote","Explosions"].forEach(cat=>{
+  const latest=new Map(data[cat].map(x=>[x[0],x[1]]));
+  data["Semua"]=data["Semua"].map(x=>latest.has(x[0])?[x[0],latest.get(x[0])]:x);
+});
+
+// Buang duplikat berdasarkan nama item.
+const semuaMap=new Map();
+data["Semua"].forEach(x=>semuaMap.set(x[0],x));
+data["Semua"]=Array.from(semuaMap.values());
+
+// Urutkan semua daftar dari termurah → termahal.
 Object.keys(data).forEach(cat=>{
   if(Array.isArray(data[cat])) data[cat].sort((a,b)=>{
     const price=v=>parseFloat(String(v).replace(/k/gi,"").replace(/,/g,""))||0;
     return price(a[1])-price(b[1]);
   });
 });
+
 function formatPrice(value){
   if(typeof value!=="string") return value;
   const raw=value.replace(/k/gi,"").replace(/,/g,"");
