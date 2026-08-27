@@ -1475,6 +1475,253 @@ footer:before,footer:after{display:none!important}footer a{color:#a93f6c!importa
 @media(min-width:700px){.buy-modal{align-items:center}.hero{padding:30px 25px 22px}.grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}.card h3{font-size:12px!important}.card .order{font-size:9px!important}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important}}
 </style>
+
+<style id="pastel-kawaii-theme">
+:root{
+  --pk-pink:#f6a8c5;
+  --pk-pink-deep:#e982ab;
+  --pk-pink-soft:#fff0f7;
+  --pk-blue:#a9dff2;
+  --pk-blue-soft:#eaf9ff;
+  --pk-yellow:#ffe7a8;
+  --pk-mint:#bdebd8;
+  --pk-lilac:#d9c9f4;
+  --pk-ink:#765267;
+  --pk-white:#fffdfd;
+}
+
+html{background:#f4c7da!important}
+body{
+  background:
+    linear-gradient(90deg,rgba(255,255,255,.20) 50%,transparent 50%) 0 0/34px 34px,
+    linear-gradient(rgba(255,255,255,.20) 50%,transparent 50%) 0 0/34px 34px,
+    linear-gradient(135deg,#f8d5e3 0%,#fff0f5 48%,#dff4fb 100%)!important;
+  color:var(--pk-ink)!important;
+}
+.site-shell{
+  position:relative;
+  width:min(100%,820px)!important;
+  margin:0 auto!important;
+  filter:drop-shadow(0 16px 26px rgba(153,91,121,.16))!important;
+}
+.site-shell:before,
+.site-shell:after{
+  position:absolute;
+  z-index:0;
+  pointer-events:none;
+}
+.site-shell:before{
+  content:'☁';
+  left:-30px;
+  top:180px;
+  color:#fff;
+  font-size:82px;
+  opacity:.72;
+  text-shadow:24px 12px 0 #e7f8ff,48px -6px 0 #fff;
+}
+.site-shell:after{
+  content:'🌼  🌸';
+  right:-25px;
+  top:470px;
+  font-size:34px;
+  opacity:.72;
+  transform:rotate(-8deg);
+}
+
+.browser-top{
+  position:relative;
+  z-index:2;
+  border-color:#e4a5bd!important;
+  background:linear-gradient(90deg,#f9d3e1,#d7eff7,#fbe6b7)!important;
+  color:#86566d!important;
+  border-radius:18px 18px 0 0!important;
+}
+.browser-dots i{border-color:#dfa0b8!important;background:#fffafc!important}
+.address-bar{
+  position:relative;z-index:2;
+  border-color:#e4a5bd!important;
+  background:#fffafd!important;
+  color:#9b7180!important;
+}
+.address-pill{border-color:#efc2d1!important;background:#fff!important}
+
+.hero{
+  position:relative!important;
+  z-index:1;
+  margin-top:8px!important;
+  padding:34px 18px 22px!important;
+  border:3px solid #efb1c9!important;
+  border-radius:26px!important;
+  background:
+    linear-gradient(rgba(255,255,255,.70),rgba(255,244,248,.78)),
+    repeating-linear-gradient(0deg,transparent 0 18px,rgba(242,161,192,.12) 18px 20px),
+    repeating-linear-gradient(90deg,transparent 0 18px,rgba(242,161,192,.12) 18px 20px),
+    linear-gradient(135deg,#f9cbdc,#ffeef5 52%,#dff5fb)!important;
+  box-shadow:inset 0 0 0 4px rgba(255,255,255,.62),0 12px 28px rgba(173,91,124,.15)!important;
+}
+.hero:before{
+  content:'☁';
+  position:absolute;
+  left:-12px;top:-10px;
+  color:#fff;
+  font-size:72px;
+  opacity:.92;
+  text-shadow:25px 8px 0 #cfeefa,48px 1px 0 #fff;
+}
+.hero:after{
+  content:'🌸  🌼  🩵';
+  position:absolute;
+  right:10px;top:10px;
+  font-size:28px;
+  opacity:.78;
+  letter-spacing:4px;
+  transform:rotate(5deg);
+}
+.hero-inner{position:relative;z-index:2!important}
+.hero-kicker{
+  border:0!important;
+  border-radius:999px!important;
+  background:#ee8fb5!important;
+  color:#fff!important;
+  box-shadow:0 5px 0 #d9779f,0 8px 14px rgba(212,107,151,.16)!important;
+  padding:6px 13px!important;
+}
+.hero h1{
+  color:#f18daf!important;
+  font-family:'Baloo 2',sans-serif!important;
+  font-size:clamp(42px,12vw,72px)!important;
+  line-height:.86!important;
+  letter-spacing:2px!important;
+  text-shadow:
+    -2px -2px 0 #fff,
+    2px -2px 0 #fff,
+    -2px 2px 0 #fff,
+    2px 2px 0 #fff,
+    0 7px 0 #f3c5d8,
+    0 10px 15px rgba(177,92,126,.12)!important;
+}
+.hero-sub{color:#80566b!important;font-size:12px!important}
+.hero-line{background:linear-gradient(90deg,transparent,#ef9fbe,#a9dff2,transparent)!important}
+.hero-stat{
+  border:2px solid #f2b4cb!important;
+  border-radius:999px!important;
+  background:#fff!important;
+  color:#8a5870!important;
+  box-shadow:0 4px 0 #f4d2df,0 5px 10px rgba(150,85,115,.08)!important;
+}
+.hero-stat:nth-child(2){border-color:#b9e4f1!important;box-shadow:0 4px 0 #d9f2fa,0 5px 10px rgba(90,150,175,.08)!important}
+.hero-stat:nth-child(3){border-color:#f1d58e!important;box-shadow:0 4px 0 #faedc9,0 5px 10px rgba(170,135,70,.08)!important}
+.search{
+  border:2px solid #efb0c8!important;
+  border-radius:999px!important;
+  background:#fff!important;
+  box-shadow:0 5px 0 #f7d8e4,0 8px 15px rgba(150,85,115,.08)!important;
+}
+.search:focus{border-color:#dca0ba!important;box-shadow:0 0 0 4px rgba(235,145,180,.14),0 7px 0 #f6d5e1!important}
+.search-wrap .search-icon{color:#d57c9e!important}
+.search-clear{border-color:#e9b1c4!important;color:#c5688d!important}
+
+.shop-nav{
+  position:relative;z-index:2;
+  border:2px solid #efb4ca!important;
+  border-radius:20px!important;
+  background:rgba(255,251,253,.92)!important;
+  box-shadow:0 8px 18px rgba(145,84,112,.10)!important;
+}
+.tab{
+  border:2px solid #efbfd0!important;
+  border-radius:999px!important;
+  background:linear-gradient(#fff,#fff5f9)!important;
+  color:#7b5366!important;
+}
+.tab:nth-child(3n){border-color:#b8e2f0!important;background:linear-gradient(#fff,#f1fbff)!important}
+.tab:nth-child(4n){border-color:#f0d79a!important;background:linear-gradient(#fff,#fff9e9)!important}
+.tab.active{
+  background:linear-gradient(#f39bbb,#e87eaa)!important;
+  border-color:#dc719d!important;
+  color:#fff!important;
+  box-shadow:0 4px 0 #d66e98!important;
+}
+
+.note{
+  border:2px dashed #edb0c7!important;
+  border-radius:16px!important;
+  background:linear-gradient(90deg,#fff3f8,#f0fbff,#fff8e7)!important;
+  color:#81586c!important;
+}
+.section-title{
+  border:2px solid #efb1c9!important;
+  border-radius:999px!important;
+  background:linear-gradient(90deg,#fff,#fff0f6,#eefaff)!important;
+  color:#7b4d62!important;
+  box-shadow:0 5px 0 #f4d8e3!important;
+}
+.section-title:after{color:#e98aaf!important}
+
+.card{
+  border:2px solid #efbfd1!important;
+  border-radius:20px!important;
+  background:linear-gradient(145deg,#fff,#fff4f8)!important;
+  box-shadow:0 8px 18px rgba(139,76,107,.10)!important;
+}
+.card:nth-child(3n){border-color:#b9e2ef!important;background:linear-gradient(145deg,#fff,#f2fbff)!important}
+.card:nth-child(4n){border-color:#efdba2!important;background:linear-gradient(145deg,#fff,#fffaf0)!important}
+.card:before{content:'✿'!important;color:#ef9dbb!important;font-size:14px!important}
+.card:after{background:rgba(169,223,242,.18)!important}
+.card h3{color:#684456!important}
+.product-image-wrap{
+  border:2px solid #efc1d1!important;
+  border-radius:15px!important;
+  background:
+    linear-gradient(45deg,rgba(255,255,255,.55) 25%,transparent 25% 75%,rgba(255,255,255,.55) 75%) 0 0/16px 16px,
+    linear-gradient(45deg,rgba(255,255,255,.55) 25%,transparent 25% 75%,rgba(255,255,255,.55) 75%) 8px 8px/16px 16px,
+    #f4ddea!important;
+}
+.card .price{background:#fff!important;border:1.5px solid #efb2c8!important;color:#d25d88!important;border-radius:999px!important}
+.card .type{color:#a17488!important}
+.card .order{
+  border:0!important;
+  border-radius:999px!important;
+  background:linear-gradient(#f29cbb,#e47da7)!important;
+  box-shadow:0 4px 0 #d96f99,0 7px 12px rgba(207,98,143,.14)!important;
+}
+
+.shop-live-info{position:relative;z-index:2}
+.live-transaction-card,.operational-card{
+  border:2px solid #efb5cb!important;
+  border-radius:20px!important;
+  background:linear-gradient(145deg,#fff,#fff1f7)!important;
+  box-shadow:0 6px 0 #f3d5e1,0 10px 20px rgba(145,82,112,.08)!important;
+}
+.operational-status{font-family:'Baloo 2',sans-serif!important;font-size:20px!important}
+.status-dot{width:9px!important;height:9px!important}
+
+.order-guide,.payment-section,#tokenCalc{
+  border:2px solid #efb5cb!important;
+  border-radius:20px!important;
+  background:linear-gradient(145deg,#fff,#fff4f8)!important;
+}
+footer{border:2px solid #efb5cb!important;border-radius:18px!important;background:#fff7fa!important}
+
+.buy-dialog{border:3px solid #e89ab8!important;border-radius:22px!important;background:#fff8fb!important}
+.modal-bar{background:linear-gradient(90deg,#f4b7ce,#d9eff7,#ffe9b6)!important;border-color:#e3a6bd!important}
+.modal-paybox{border-color:#e5a2bc!important;background:#fff1f7!important;border-radius:16px!important}
+.modal-btn.primary{background:linear-gradient(#f19bbb,#df75a2)!important;border-color:#d96d98!important}
+.modal-btn.secondary{border-color:#e0adbf!important}
+
+@media(max-width:699px){
+  .site-shell:before{left:-35px;top:145px;font-size:58px}
+  .site-shell:after{right:-22px;top:430px;font-size:27px}
+  .hero{padding:29px 11px 18px!important;border-radius:22px!important}
+  .hero:before{font-size:52px}
+  .hero:after{font-size:21px}
+  .hero h1{font-size:clamp(39px,13vw,58px)!important}
+  .hero-sub{font-size:10px!important}
+  .hero-stat{font-size:8px!important;padding:5px 8px!important}
+  .card{border-radius:15px!important}
+}
+</style>
+
 </head><body>
 <div class="site-shell">
   <div class="browser-top">
@@ -1491,10 +1738,10 @@ footer:before,footer:after{display:none!important}footer a{color:#a93f6c!importa
     <div class="hero-inner">
       <div class="hero-kicker">♡ OFFICIAL ITEM STORE · ROBLOX</div>
       <h1>CHUWIE<br>KELONTONG</h1>
-      <div class="hero-sub">Sword · Emote · Explosion · Raps ✦<br>koleksi item cute buat koleksi kamu</div>
+      <div class="hero-sub">Sword · Emote · Explosion · Raps ✦</div>
       <div class="hero-line"></div>
       <div class="hero-stats">
-        <div class="hero-stat">✦ 10.000+ TRANSAKSI</div>
+        <div class="hero-stat">✦ 100% TRUSTED</div>
         <div class="hero-stat">♡ FAST RESPONSE</div>
         <div class="hero-stat">🎀 REQUEST ITEM</div>
       </div>
@@ -1525,18 +1772,13 @@ footer:before,footer:after{display:none!important}footer a{color:#a93f6c!importa
       <span class="live-dot"></span>
       <span class="live-label">LIVE ✦</span>
     </div>
-    <div class="live-number" id="liveTransactions">10.000+</div>
+    <div class="live-number" id="liveTransactions">10.247+</div>
     <div class="live-caption">♡ TRANSAKSI YANG TELAH SELESAI</div>
   </div>
 
   <div class="operational-card">
     <div class="operational-title">♡ JAM OPERASIONAL</div>
-    <div class="operational-status">
-      <span class="status-dot" id="operationalDot"></span>
-      <strong id="operationalStatus">OPEN</strong>
-    </div>
     <div class="operational-hours">08.00 — 22.00 WIB</div>
-    <div class="operational-note" id="operationalNote">Toko sedang buka ✦</div>
   </div>
 </section>
 
@@ -1821,40 +2063,9 @@ render();
 </script>
 
 
-<script>
-(function(){
-  function updateOperationalStatus(){
-    const now=new Date();
-    const parts=new Intl.DateTimeFormat("en-US",{
-      timeZone:"Asia/Jakarta",
-      hour:"2-digit",
-      minute:"2-digit",
-      hour12:false
-    }).formatToParts(now);
-    const hour=Number(parts.find(p=>p.type==="hour").value);
-    const minute=Number(parts.find(p=>p.type==="minute").value);
-    const current=hour*60+minute;
-    const open=8*60;
-    const close=22*60;
-    const isOpen=current>=open && current<close;
 
-    if(isOpen){
-      statusEl.textContent="OPEN";
-      statusEl.style.color="#31aa68";
-      dotEl.style.background="#35c979";
-      noteEl.textContent="Toko sedang buka ✦";
-    }else{
-      statusEl.textContent="CLOSED";
-      statusEl.style.color="#d65b8b";
-      dotEl.style.background="#d65b8b";
-      noteEl.textContent=current<open ? "Buka lagi jam 08.00 WIB ♡" : "Buka lagi besok jam 08.00 WIB ♡";
-    }
-  }
 
-  updateOperationalStatus();
-  setInterval(updateOperationalStatus,30000);
-})();
-</script>
+
 
 
 
@@ -1865,28 +2076,24 @@ render();
   const tx=document.getElementById("liveTransactions");
   if(!tx) return;
 
-  // Mulai dari angka >10.000 supaya tidak terlihat terlalu sempurna.
   let count=Number(localStorage.getItem("chuwieTransactions"));
-  if(!Number.isFinite(count) || count<10001){
+  if(!Number.isFinite(count) || count < 10001){
     count=10247;
     localStorage.setItem("chuwieTransactions",String(count));
   }
 
-  function render(){
+  function renderTransactions(){
     tx.textContent=count.toLocaleString("id-ID")+"+";
   }
 
-  function tick(){
-    // Naik perlahan; tidak setiap interval pasti bertambah.
-    if(Math.random()<0.58){
-      count += Math.random()<0.88 ? 1 : 2;
-      localStorage.setItem("chuwieTransactions",String(count));
-      render();
-    }
-  }
+  renderTransactions();
 
-  render();
-  setInterval(tick,30000);
+  // Angka transaksi bertambah otomatis setiap menit.
+  setInterval(function(){
+    count += 1;
+    localStorage.setItem("chuwieTransactions",String(count));
+    renderTransactions();
+  }, 60000);
 })();
 </script>
 
