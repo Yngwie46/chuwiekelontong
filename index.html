@@ -1722,6 +1722,56 @@ footer{border:2px solid #efb5cb!important;border-radius:18px!important;backgroun
 }
 </style>
 
+
+<style id="image-frame-fix">
+/* Frame mengikuti rasio asli gambar (mis. 16:9), jadi tidak ada ruang kosong kotak 1:1 */
+.card .product-image-wrap{
+  aspect-ratio:auto !important;
+  height:auto !important;
+  display:block !important;
+  background:transparent !important;
+}
+.card .product-image{
+  width:100% !important;
+  height:auto !important;
+  aspect-ratio:auto !important;
+  object-fit:contain !important;
+  padding:0 !important;
+  display:block !important;
+}
+</style>
+
+<style id="fix-image-frame-ratio">
+/* Frame mengikuti rasio asli gambar, bukan dipaksa kotak 1:1 */
+.card .product-image-wrap{
+  aspect-ratio:auto !important;
+  height:auto !important;
+  display:block !important;
+  overflow:hidden;
+}
+.card .product-image{
+  width:100% !important;
+  height:auto !important;
+  aspect-ratio:auto !important;
+  object-fit:initial !important;
+  display:block !important;
+  padding:0 !important;
+}
+</style>
+
+<style id="force-product-16x9">
+/* FINAL FIX: semua frame gambar produk benar-benar 16:9 */
+.card .product-image-wrap{
+  aspect-ratio:16 / 9 !important;
+  height:auto !important;
+}
+.card .product-image{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+  padding:0 !important;
+}
+</style>
 </head><body>
 <div class="site-shell">
   <div class="browser-top">
