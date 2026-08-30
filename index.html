@@ -1829,7 +1829,7 @@ footer{border:2px solid #efb5cb!important;border-radius:18px!important;backgroun
       <span class="live-dot"></span>
       <span class="live-label">LIVE ✦</span>
     </div>
-    <div class="live-number" id="liveTransactions">10.247+</div>
+    <div class="live-number" id="liveTransactions">11.247+</div>
     <div class="live-caption">♡ TRANSAKSI YANG TELAH SELESAI</div>
   </div>
 
@@ -1929,7 +1929,7 @@ const data={
 "Sword Cewe":[
 ["Dual Flutter Blade","43k"],["Dual Heart Blade","50k"],["Dual Luv4pain Blade","45k"],["Dual Loveclaw Blade","48k"],["Dual Love Blade","45k"],["Dual Ribbon Blade","45k"],["Dual Rose Blade","40k"],["Dual Soulbloom Blade","35k"],["Dual Spring Saber Blade","35k"],["Dual Strawberry Cake Blade","40k"],["Dual Butterfly Blade","35k"],["Butterfly Bow","65k"],["Dual Bubble Blade + Aksesoris","65k"],["Dual Gothic Bunny","60k"],["Dual Sugarcoated Saber","70k"],["Harmonic Fan","83k"],["Nyxpetal Fan","93k"],["Peachborne Fan","83k"],["Dual Bubble Blaster","117k"],["Sakura Parasol","101k"]],
 "Sword Entry Level":[
-["Witch's Curse","245k"],["Poisoned Bunny","315k"],["Fox Katana","436k"],["New Year Set ( Finisher )","86k"],["Dual Love Sickle ( Finisher )","86k"],["Witch Set ( Finisher)","75k"],["Neo Katana","120k"],["Chained Scorpion (Finisher)","86k"],["Samurai Set","94k"],["Pillow","200k"],["Pink Oni Katana","235k"],["Red Oni Katana","235k"],["Purple Oni Katana","235k"],["Blue Oni Katana","420k"],["Redmoon Katana","215k"],["Riftlare Katana","250k"],["Black Oni Katana","222k"],["Hollow Oath Katana","225k"],["Floppy Chiken","225k"],["Star Wand","225k"],["Higanbana Katana","250k"],["Pulse Heart","330k"],["Lily Katana","340k"],["Gyaru Katana","380k"],["Dual Yin Yang","334k"],["Hitman","375k"],["Brutality Affection Bat","530k"],["Pink Ninja Katana","478k"],["Blosoom Katana","500k"],["Kitty Katana","910k"],["Pearl Angel Katana","275k"],["Astral Seraph","240k"],["North Blade","115k"],["Crystal Great Blade","135k"],["Cat Paw","800k"],["Kitty Launcher","1,205k"]],
+["Witch's Curse","245k"],["Poisoned Bunny","315k"],["Fox Katana","436k"],["New Year Set ( Finisher )","86k"],["Dual Love Sickle ( Finisher )","86k"],["Witch Set ( Finisher)","75k"],["Neo Katana","120k"],["Chained Scorpion (Finisher)","86k"],["Samurai Set","94k"],["Pillow","200k"],["Pink Oni Katana","235k"],["Red Oni Katana","235k"],["Purple Oni Katana","235k"],["Blue Oni Katana","420k"],["Redmoon Katana","215k"],["Riftlare Katana","250k"],["Black Oni Katana","222k"],["Hollow Oath Katana","225k"],["Floppy Chiken","225k"],["Star Wand","225k"],["Higanbana Katana","250k"],["Pulse Heart","330k"],["Lily Katana","340k"],["Gyaru Katana","380k"],["Dual Yin Yang","334k"],["Hitman","375k"],["Brutality Affection Bat","530k"],["Pink Ninja Katana","478k"],["Blosoom Katana","500k"],["Kitty Katana","1.050k"],["Pearl Angel Katana","275k"],["Astral Seraph","240k"],["North Blade","115k"],["Crystal Great Blade","135k"],["Cat Paw","800k"],["Kitty Launcher","1,205k"]],
 "Emote":[
 ["Lush","7k"],["Walk This Earth","7k"],["Love Struck Sway","10k"],["Heart Clap","10k"],["Jiggy","10k"],["Floating Seat","12k"],["Duo Dansen","12k"],["Shake","12k"],["Freestyle Dance","12k"],["Air Punch","12k"],["Pumpin","12k"],["Headless Dribble","12k"],["Pointing The Finger","12k"],["Haunted Bow","12k"],["I'm Sorry","12k"],["Bunny Conga","12k"],["Really Shy","12k"],["Tantrum","12k"],["Real Man","14k"],["Dansen","16k"],["Assumptions","18k"],["Scaredy Cat","18k"],["Office Spin","19k"],["Phantom Chase","20k"],["Floating Heart Aura","28k"],["Blushing Gesture","29k"],["Snowfall Dance","32k"],["I'm Tired","32k"],["Parrot Dance","36k"],["Wait","40k"],["Glitched Dance","48k"],["Look At Me","90k"],["Popular","94k"],["Bring it Around","127k"],["Dancinha","232k"],["Proposal","270k"],["Queen Throne","317k"],["Montagem Miaw","408k"],["Legs Kickin","527k"],["Rose Gift","632k"],["Hug","1037k"]],
 "Explosions":[
@@ -1992,17 +1992,19 @@ data["Semua"].forEach(x=>semuaMap.set(x[0],x));
 data["Semua"]=Array.from(semuaMap.values());
 Object.keys(data).forEach(cat=>{
   if(Array.isArray(data[cat])) data[cat].sort((a,b)=>{
-    const price=v=>parseFloat(String(v).replace(/k/gi,"").replace(/,/g,""))||0;
+    const price=v=>Number(String(v).replace(/k/gi,"").replace(/[.,]/g,""))||0;
     return price(a[1])-price(b[1]);
   });
 });
 
 function formatPrice(value){
   if(typeof value!=="string") return value;
-  const raw=value.replace(/k/gi,"").replace(/,/g,"");
-  const num=parseFloat(raw);
-  if(Number.isNaN(num)) return value;
-  return "Rp."+(num*1000).toLocaleString("id-ID");
+  // Harga disimpan dalam format k (contoh: 340k / 1.050k),
+  // tetapi selalu ditampilkan sebagai Rupiah penuh di website.
+  const raw=value.trim().replace(/k/gi,"").replace(/[.,]/g,"");
+  const num=Number(raw);
+  if(!Number.isFinite(num)) return value;
+  return "Rp " + (num*1000).toLocaleString("id-ID");
 }
 function openBuy(name, price){
   const formatted=formatPrice(price);
@@ -2134,8 +2136,8 @@ render();
   if(!tx) return;
 
   let count=Number(localStorage.getItem("chuwieTransactions"));
-  if(!Number.isFinite(count) || count < 11000){
-    count=11000;
+  if(!Number.isFinite(count) || count < 11247){
+    count=11247;
     localStorage.setItem("chuwieTransactions",String(count));
   }
 
