@@ -1793,6 +1793,342 @@ footer{border:2px solid #efb5cb!important;border-radius:18px!important;backgroun
   text-align:center;
 }
 </style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style id="reference-inspired-final">
+/* Final visual pass — inspired by the uploaded pastel browser/webcore reference.
+   Store data and interactions below are intentionally untouched. */
+:root{
+  --ref-pink:#f3a5c1;
+  --ref-hot:#dd6f9c;
+  --ref-ink:#7b5268;
+  --ref-paper:#fff8fb;
+  --ref-blue:#dff4fb;
+}
+body{
+  padding:8px!important;
+  background:
+    radial-gradient(circle at 7% 8%,rgba(255,255,255,.9) 0 4px,transparent 5px),
+    radial-gradient(circle at 91% 12%,rgba(255,255,255,.72) 0 3px,transparent 4px),
+    repeating-linear-gradient(0deg,rgba(238,155,190,.075) 0 1px,transparent 1px 18px),
+    linear-gradient(135deg,#f7c9da 0%,#fff1f6 48%,#dff3fa 100%)!important;
+}
+.site-shell{
+  overflow:visible;
+  border-radius:24px;
+}
+.site-shell::before{
+  content:'♡'!important;
+  left:-16px!important;top:120px!important;
+  font-family:'Baloo 2',sans-serif!important;
+  color:#f5b4cc!important;
+  font-size:76px!important;
+  opacity:.7!important;
+  text-shadow:18px 15px 0 rgba(255,255,255,.72)!important;
+}
+.site-shell::after{
+  content:'✦  ♡  ✦'!important;
+  right:-10px!important;top:345px!important;
+  font-size:20px!important;
+  color:#ee91b6!important;
+  letter-spacing:5px!important;
+}
+.browser-top{
+  height:34px!important;
+  padding:0 13px!important;
+  border:2px solid #e8a2bc!important;
+  border-bottom:0!important;
+  border-radius:24px 24px 0 0!important;
+  background:linear-gradient(90deg,#f7cadb 0%,#f4d6e5 48%,#d7eef6 100%)!important;
+}
+.browser-brand{font-family:'Fredoka',sans-serif!important;font-size:11px!important;color:#8c5970!important}
+.browser-dots i{width:9px!important;height:9px!important;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.address-bar{
+  min-height:34px!important;
+  padding:4px 10px!important;
+  border:2px solid #e8a2bc!important;
+  border-top:0!important;
+  background:#fff8fb!important;
+}
+.address-pill{height:23px!important;border-radius:999px!important;background:#fff!important}
+.hero{
+  min-height:360px;
+  margin-top:0!important;
+  padding:30px 16px 22px!important;
+  border:3px solid #efb2c9!important;
+  border-radius:0 0 30px 30px!important;
+  background:
+    radial-gradient(circle at 18% 34%,rgba(255,255,255,.88) 0 14%,transparent 14.5%),
+    radial-gradient(circle at 83% 24%,rgba(255,255,255,.78) 0 12%,transparent 12.5%),
+    linear-gradient(rgba(255,247,251,.66),rgba(255,233,242,.74)),
+    repeating-linear-gradient(0deg,transparent 0 20px,rgba(235,142,180,.13) 20px 21px),
+    repeating-linear-gradient(90deg,transparent 0 20px,rgba(235,142,180,.13) 20px 21px),
+    linear-gradient(135deg,#f7c5d8,#ffeef5 54%,#d9f2fa)!important;
+  box-shadow:inset 0 0 0 5px rgba(255,255,255,.55),0 13px 28px rgba(167,82,116,.16)!important;
+}
+.hero::before{
+  content:'☁  ♡'!important;
+  left:-7px!important;top:6px!important;
+  color:#fff!important;
+  font-size:54px!important;
+  opacity:.9!important;
+  text-shadow:24px 10px 0 #fff,40px 1px 0 #e6f7fd!important;
+}
+.hero::after{
+  content:'♡'!important;
+  right:22px!important;top:52px!important;bottom:auto!important;
+  width:48px;height:48px;display:grid;place-items:center;
+  border-radius:50%;
+  color:#fff!important;
+  font-size:25px!important;
+  background:linear-gradient(#f38db5,#df6f9f)!important;
+  border:4px solid #fff!important;
+  box-shadow:0 5px 0 #e8b2c8,0 8px 16px rgba(174,79,117,.18)!important;
+  opacity:1!important;
+}
+.hero-inner{max-width:610px!important}
+.hero-kicker{
+  position:relative;
+  z-index:3;
+  margin-top:4px;
+  background:#f19abb!important;
+  border-radius:8px!important;
+  padding:6px 13px!important;
+  box-shadow:0 4px 0 #df79a1,0 7px 13px rgba(205,102,144,.16)!important;
+}
+.hero h1{
+  position:relative;
+  z-index:2;
+  margin:18px 0 7px!important;
+  color:#f197b9!important;
+  font-family:'Pacifico','Baloo 2',cursive!important;
+  font-size:clamp(43px,13vw,78px)!important;
+  line-height:.94!important;
+  letter-spacing:0!important;
+  transform:rotate(-2deg);
+  text-shadow:
+    -3px -3px 0 #fff,
+     3px -3px 0 #fff,
+    -3px  3px 0 #fff,
+     3px  3px 0 #fff,
+     0 7px 0 #e6b4c8,
+     0 11px 18px rgba(164,75,112,.16)!important;
+}
+.hero h1::first-line{color:#ee91b4!important}
+.hero-sub{
+  display:inline-block!important;
+  position:relative;z-index:2;
+  margin:8px auto 13px!important;
+  padding:5px 12px!important;
+  border-radius:999px!important;
+  background:rgba(255,255,255,.72)!important;
+  border:1px solid #f0bfd0!important;
+  color:#8c5c70!important;
+}
+.hero-line{max-width:420px;margin:10px auto 13px!important;height:2px!important}
+.hero-stats{gap:6px!important;margin-bottom:14px!important}
+.hero-stat{
+  border-radius:999px!important;
+  padding:6px 10px!important;
+  font-family:'Fredoka',sans-serif!important;
+  letter-spacing:.2px!important;
+}
+.search{min-height:45px!important;font-family:'Fredoka',sans-serif!important}
+.shop-nav{margin-top:10px!important;border-radius:18px!important}
+.tab{font-family:'Fredoka',sans-serif!important}
+.shop-live-info{margin-top:10px!important}
+.section-title{font-family:'Fredoka','Baloo 2',sans-serif!important;font-weight:700!important}
+.card h3{font-family:'Fredoka','Quicksand',sans-serif!important;font-weight:700!important}
+.card .order{font-family:'Fredoka',sans-serif!important;letter-spacing:.35px!important}
+@media(max-width:699px){
+  body{padding:5px!important}
+  .browser-top{height:30px!important;border-radius:18px 18px 0 0!important}
+  .address-bar{min-height:31px!important}
+  .hero{min-height:335px;padding:24px 10px 17px!important;border-radius:0 0 24px 24px!important}
+  .hero::before{font-size:42px!important;left:-4px!important}
+  .hero::after{right:14px!important;top:47px!important;width:40px!important;height:40px!important;font-size:20px!important}
+  .hero-kicker{font-size:8px!important;padding:5px 9px!important}
+  .hero h1{font-size:clamp(38px,12.4vw,58px)!important;margin-top:17px!important}
+  .hero-sub{font-size:9px!important;padding:4px 9px!important}
+  .hero-stat{font-size:7.5px!important;padding:5px 7px!important}
+  .site-shell::before{left:-10px!important;top:140px!important;font-size:56px!important}
+  .site-shell::after{right:-4px!important;top:390px!important;font-size:14px!important}
+}
+</style>
+
+
+<style id="high-readability-pass">
+/* Readability pass — keep the pastel webcore vibe, make every important text easier to read. */
+:root{--read-dark:#5a3044;--read-mid:#75465a;--read-pink:#c95182}
+.hero h1{
+  font-family:'Baloo 2','Fredoka',sans-serif!important;
+  font-weight:800!important;
+  color:var(--read-dark)!important;
+  letter-spacing:.4px!important;
+  line-height:1.02!important;
+  transform:none!important;
+  text-shadow:0 2px 0 #fff,0 4px 0 #f5bfd2,0 8px 14px rgba(120,58,83,.18)!important;
+}
+.hero h1::first-line{color:var(--read-dark)!important}
+.hero-kicker{color:#fff!important;font-weight:900!important;text-shadow:0 1px 1px rgba(90,40,60,.22)!important}
+.hero-sub{color:#5e3749!important;font-weight:800!important;background:rgba(255,255,255,.92)!important;border:1.5px solid #df9ab5!important}
+.hero-stat{color:#5c3548!important;background:#fff!important;border:1.5px solid #e5a5bd!important;font-weight:900!important;box-shadow:0 3px 0 #f1c4d3!important}
+.address-pill,.browser-brand{color:#6d4054!important;font-weight:800!important}
+.search{color:#4f3340!important;background:#fff!important;font-weight:700!important}
+.search::placeholder{color:#8d6575!important;opacity:1!important}
+.tab{color:#563847!important;font-weight:800!important;background:#fff!important}
+.tab.active{color:#fff!important;text-shadow:0 1px 1px rgba(90,30,55,.18)!important}
+.note,.section-title,.guide-title,.payment-title,.calc-title{color:#583545!important}
+.card h3{color:#4e3340!important;font-weight:800!important}
+.card .price{color:#b02e68!important;font-weight:900!important}
+.card .type{color:#6b5962!important;font-weight:700!important}
+.card .order{font-weight:900!important}
+@media(max-width:699px){
+  .hero{min-height:315px!important}
+  .hero h1{font-size:clamp(34px,10.8vw,52px)!important;margin:14px 0 8px!important}
+  .hero-kicker{font-size:9px!important;letter-spacing:.5px!important}
+  .hero-sub{font-size:10px!important}
+  .hero-stat{font-size:8.5px!important;padding:6px 8px!important}
+  .tab{font-size:10px!important;padding:7px 10px!important}
+  .note{font-size:10.5px!important}
+  .grid{gap:9px!important}
+  .card{padding:10px!important;border-radius:12px!important}
+  .card h3{font-size:12px!important;line-height:1.3!important;min-height:32px!important}
+  .card .price{font-size:11px!important;padding:4px 7px!important}
+  .card .type{font-size:9px!important;white-space:normal!important;overflow:visible!important;text-overflow:clip!important}
+  .card .order{font-size:9px!important;padding:8px 6px!important;min-height:30px!important}
+  .section-title{font-size:18px!important}
+}
+</style>
+
+<style id="cute-readable-balance">
+/* BALANCE PASS: balik imutnya, tapi teks tetap gampang dibaca */
+:root{
+  --cb-pink:#ef86b1;
+  --cb-hot:#d95f93;
+  --cb-dark:#5b3548;
+  --cb-soft:#fff4f8;
+}
+
+body{
+  background:
+    radial-gradient(circle at 8% 9%,rgba(255,255,255,.92) 0 3px,transparent 4px),
+    radial-gradient(circle at 92% 18%,rgba(255,255,255,.8) 0 3px,transparent 4px),
+    repeating-linear-gradient(0deg,rgba(234,139,181,.08) 0 1px,transparent 1px 16px),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.2) 0 1px,transparent 1px 16px),
+    linear-gradient(135deg,#f8c9dc 0%,#fff0f6 50%,#dff3fb 100%)!important;
+}
+
+/* Hero tetap rame, tapi title pakai font bulat yang gampang dibaca */
+.hero{
+  background:
+    radial-gradient(circle at 16% 24%,rgba(255,255,255,.88) 0 9%,transparent 9.5%),
+    radial-gradient(circle at 84% 19%,rgba(255,255,255,.72) 0 8%,transparent 8.5%),
+    repeating-linear-gradient(0deg,transparent 0 17px,rgba(238,133,177,.13) 17px 18px),
+    repeating-linear-gradient(90deg,transparent 0 17px,rgba(238,133,177,.13) 17px 18px),
+    linear-gradient(135deg,#f7bfd6,#fff1f6 55%,#d9f2fb)!important;
+}
+.hero:before{
+  content:'☁  ♡  ✦'!important;
+  font-size:48px!important;
+  letter-spacing:2px!important;
+}
+.hero:after{
+  content:'♡'!important;
+  transform:rotate(-8deg)!important;
+}
+.hero h1{
+  font-family:'Fredoka','Baloo 2',sans-serif!important;
+  font-weight:700!important;
+  color:#d85f93!important;
+  letter-spacing:1px!important;
+  line-height:.9!important;
+  text-shadow:
+    -2px -2px 0 #fff,
+     2px -2px 0 #fff,
+    -2px  2px 0 #fff,
+     2px  2px 0 #fff,
+     0 5px 0 #f1bfd2,
+     0 9px 14px rgba(126,58,87,.14)!important;
+}
+.hero h1::first-line{color:#d85f93!important}
+.hero-kicker{
+  border-radius:999px!important;
+  background:linear-gradient(135deg,#f39bbc,#e87ba8)!important;
+  box-shadow:0 4px 0 #d96f99,0 8px 15px rgba(207,98,143,.15)!important;
+}
+.hero-sub{border-radius:999px!important;box-shadow:0 3px 0 #f5d7e3!important}
+
+/* Lebih banyak rasa kawaii tanpa nutup tulisan */
+.browser-brand::after{content:'  🎀';font-size:11px}
+.section-title::before{content:'🎀 ';font-size:.9em}
+.note::before{content:'♡ ';color:#dc6f9b;font-weight:900}
+.note::after{content:' ✦';color:#d990b2}
+
+.tab{position:relative!important}
+.tab::after{
+  content:'♡';
+  margin-left:4px;
+  color:#e98aaa;
+  font-size:9px;
+}
+.tab.active::after{color:#fff!important}
+
+.card{
+  border-radius:18px!important;
+  overflow:hidden!important;
+}
+.card::before{
+  content:'✦'!important;
+  color:#ea79a8!important;
+  font-size:15px!important;
+}
+.card h3::before{content:'✦ ';color:#e981ac;font-size:.78em}
+.card .price{
+  box-shadow:0 2px 0 #f5d2df!important;
+}
+.card .order{
+  position:relative!important;
+  background:linear-gradient(135deg,#f39dbc,#e779a5)!important;
+}
+.card .order::before{content:'♡ ';}
+
+/* Sticker-like cards */
+.shop-live-info > *,
+.order-guide,.payment-section,#tokenCalc{
+  border-radius:20px!important;
+  box-shadow:0 5px 0 #f3d2df,0 12px 22px rgba(145,82,112,.09)!important;
+}
+
+/* Cute footer */
+footer::before{content:'🎀  ♡  ✦  ';}
+footer::after{content:'  ✦  ♡  🎀';}
+
+/* Dekorasi kecil di shell, tidak mengganggu isi */
+.site-shell::after{
+  content:'✦  ♡  ✦  ♡'!important;
+  color:#e57ca8!important;
+  font-size:16px!important;
+}
+
+@media(max-width:699px){
+  .hero{min-height:325px!important}
+  .hero h1{
+    font-size:clamp(37px,11.6vw,55px)!important;
+    letter-spacing:.5px!important;
+    line-height:.92!important;
+  }
+  .hero:before{font-size:38px!important}
+  .hero-sub{font-size:9.5px!important}
+  .section-title{font-size:17px!important}
+  .tab::after{font-size:7px!important}
+  .card h3::before{font-size:.65em}
+}
+</style>
+
 </head><body>
 <div class="site-shell">
   <div class="browser-top">
@@ -1854,6 +2190,8 @@ footer{border:2px solid #efb5cb!important;border-radius:18px!important;backgroun
 </section>
 
 <main>
+      <div class="raps-realtime-note">⚠️ *Screenshoot yang tertera di gambar merupakan Screenshoot lama. Harga tidak dipatok dari Raps gambar, tetapi dari Raps realtime.</div>
+
     <div class="note">♡ Bisa request item di luar rekomendasi · klik <b>BELI</b> untuk lihat payment</div>
     <div id="content"></div>
     <div id="empty" class="empty">Item tidak ditemukan ♡</div>
@@ -1880,7 +2218,7 @@ footer{border:2px solid #efb5cb!important;border-radius:18px!important;backgroun
     <section id="tokenCalc" class="token-calc" style="display:none">
       <div class="calc-title">♡ RAPS / TOKEN ✦</div>
       <div class="calc-subtitle">Hitung pembelian Raps dengan cepat~ 🎀</div>
-      <div class="raps-realtime-note">⚠️ *Screenshoot yang tertera di gambar merupakan Screenshoot lama. Harga tidak dipatok dari Raps gambar, tetapi dari Raps realtime.</div>
+      
 
       <label for="tokenInput">Mau beli berapa Raps?</label>
       <div class="calc-input-wrap">
@@ -1942,7 +2280,7 @@ const data={
 "Backsword":[
 ["Strawberry Cake Blade","47k"],["Final Phase","50k"],["Rose Blade","65k"],["Samurai Katana","60k"],["Blackcat Blade","51k"],["Sinister","45k"],["Corrupted Loveblade","45k"],["Hellchain","41k"],["Death Call","40k"],["Hazy Katana","45k"],["Arachne Blade","43k"],["Lumen Petal","45k"],["Y2K","75k"],["Gravebone Blade","38k"],["Runic Red Blade","45k"]],
 "Sword Cewe":[
-["Dual Flutter Blade","48k"],["Dual Heart Blade","80k"],["Dual Luv4pain Blade","50k"],["Dual Loveclaw Blade","50k"],["Dual Love Blade","50k"],["Dual Ribbon Blade","50k"],["Dual Rose Blade","45k"],["Dual Soulbloom Blade","40k"],["Dual Spring Saber Blade","40k"],["Dual Strawberry Cake Blade","45k"],["Dual Butterfly Blade","40k"],["Butterfly Bow","70k"],["Dual Bubble Blade + Aksesoris","70k"],["Dual Gothic Bunny","66k"],["Dual Sugarcoated Saber","80k"],["Harmonic Fan","88k"],["Nyxpetal Fan","98k"],["Peachborne Fan","88k"],["Dual Bubble Blaster","122k"],["Sakura Parasol","106k"]],
+["Dual Flutter Blade","48k"],["Dual Heart Blade","55k"],["Dual Luv4pain Blade","50k"],["Dual Loveclaw Blade","50k"],["Dual Love Blade","50k"],["Dual Ribbon Blade","50k"],["Dual Rose Blade","45k"],["Dual Soulbloom Blade","40k"],["Dual Spring Saber Blade","40k"],["Dual Strawberry Cake Blade","45k"],["Dual Butterfly Blade","40k"],["Butterfly Bow","70k"],["Dual Bubble Blade + Aksesoris","70k"],["Dual Gothic Bunny","66k"],["Dual Sugarcoated Saber","80k"],["Harmonic Fan","88k"],["Nyxpetal Fan","98k"],["Peachborne Fan","88k"],["Dual Bubble Blaster","122k"],["Sakura Parasol","106k"]],
 "Sword Entry Level":[
 ["Witch's Curse","250k"],["Poisoned Bunny","320k"],["Fox Katana","441k"],["New Year Set ( Finisher )","95k"],["Dual Love Sickle ( Finisher )","95k"],["Witch Set ( Finisher)","80k"],["Neo Katana","100k"],["Chained Scorpion (Finisher)","100k"],["Samurai Set","99k"],["Pillow","205k"],["Pink Oni Katana","240k"],["Red Oni Katana","240k"],["Purple Oni Katana","240k"],["Blue Oni Katana","425k"],["Redmoon Katana","220k"],["Riftlare Katana","255k"],["Black Oni Katana","227k"],["Hollow Oath Katana","280k"],["Floppy Chiken","230k"],["Star Wand","230k"],["Higanbana Katana","255k"],["Pulse Heart","335k"],["Lily Katana","345k"],["Gyaru Katana","385k"],["Dual Yin Yang","339k"],["Hitman","380k"],["Brutality Affection Bat","535k"],["Pink Ninja Katana","483k"],["Blosoom Katana","535k"],["Kitty Katana","1,055k"],["Pearl Angel Katana","280k"],["Astral Seraph","245k"],["North Blade","120k"],["Crystal Great Blade","140k"],["Cat Paw","805k"],["Kitty Launcher","1,210k"]],
 "Emote":[
@@ -2170,6 +2508,97 @@ render();
   }, 60000);
 })();
 </script>
+
+
+<style id="smooth-motion-pass">
+/* Smooth motion pass — softer, more fluid, and easier on mobile GPUs */
+:root{--smooth-ease:cubic-bezier(.22,.61,.36,1);--soft-ease:cubic-bezier(.16,1,.3,1)}
+html{scroll-behavior:smooth}
+
+/* Keep continuous motion gentle instead of bouncy/jumpy. */
+.hero h1{
+  animation:heroTitleFloat 5.8s var(--smooth-ease) infinite alternate!important;
+  will-change:transform;
+}
+.hero:before,.hero:after{
+  animation:heroDecorFloat 6.5s var(--smooth-ease) infinite alternate;
+  will-change:transform,opacity;
+}
+.hero:after{animation-delay:-2.8s}
+
+/* Product cards enter more gradually and interact smoothly. */
+.card{
+  animation:retroCardInSmooth .62s var(--soft-ease) both!important;
+  transition:transform .32s var(--smooth-ease),box-shadow .32s var(--smooth-ease),border-color .32s var(--smooth-ease)!important;
+  transform:translateZ(0);
+  backface-visibility:hidden;
+}
+.card:hover{
+  transform:translate3d(0,-3px,0)!important;
+}
+.card .product-image{
+  transition:transform .42s var(--smooth-ease)!important;
+  will-change:transform;
+}
+.card:hover .product-image{transform:scale(1.045)!important}
+.card .order,.modal-btn,.tab,.search-clear{
+  transition:transform .26s var(--smooth-ease),box-shadow .26s var(--smooth-ease),filter .26s var(--smooth-ease),background .26s var(--smooth-ease)!important;
+}
+.card .order:active,.modal-btn:active,.tab:active,.search-clear:active{
+  transform:scale(.97)!important;
+}
+
+/* Soft breathing for the active category instead of a hard pulse. */
+.tab.active{
+  animation:activeTabBreathe 3.8s var(--smooth-ease) infinite!important;
+}
+
+/* Modal feels less abrupt when it appears. */
+.buy-dialog{
+  animation:modalUpSmooth .48s var(--soft-ease)!important;
+  will-change:transform,opacity;
+}
+.buy-modal.open{
+  animation:overlayFade .28s ease both;
+}
+
+/* Calm, smooth floating accents. */
+@keyframes heroTitleFloat{
+  from{transform:translate3d(0,0,0)}
+  to{transform:translate3d(0,-4px,0)}
+}
+@keyframes heroDecorFloat{
+  from{transform:translate3d(0,0,0) rotate(-2deg);opacity:.32}
+  to{transform:translate3d(0,-7px,0) rotate(2deg);opacity:.52}
+}
+@keyframes retroCardInSmooth{
+  from{opacity:0;transform:translate3d(0,12px,0) scale(.985)}
+  to{opacity:1;transform:translate3d(0,0,0) scale(1)}
+}
+@keyframes activeTabBreathe{
+  0%,100%{transform:translate3d(0,0,0);filter:brightness(1)}
+  50%{transform:translate3d(0,-1px,0);filter:brightness(1.035)}
+}
+@keyframes modalUpSmooth{
+  from{opacity:0;transform:translate3d(0,28px,0) scale(.965)}
+  to{opacity:1;transform:translate3d(0,0,0) scale(1)}
+}
+@keyframes overlayFade{from{opacity:0}to{opacity:1}}
+
+/* Avoid too many simultaneous animations on phones. */
+@media(max-width:699px){
+  .card{animation-duration:.56s!important}
+  .card:nth-child(2n){animation-delay:.035s!important}
+  .card:nth-child(3n){animation-delay:.07s!important}
+  .hero h1{animation-duration:6.5s!important}
+  .hero:before,.hero:after{animation-duration:7.5s!important}
+  .tab.active{animation-duration:4.5s!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero h1,.hero:before,.hero:after,.card,.tab.active,.buy-dialog,.buy-modal.open{animation:none!important}
+  *{transition-duration:.01ms!important}
+}
+</style>
 
 </body>
 </html>
